@@ -26,8 +26,8 @@ public class RuleParser {
                 String valueStr = (String) ruleData.get("values");
                 String[] split = valueStr.split(",");
                 Set<Object> values = new HashSet<>(Arrays.asList(split));
-                return new InRule<>(attributeName,values);
-            // 添加其他类型的规则解析
+                return new InRule<>(attributeName, values);
+                // 添加其他类型的规则解析
             default:
                 throw new IllegalArgumentException("Unknown rule type: " + type);
         }
@@ -37,9 +37,11 @@ public class RuleParser {
         String attributeName = (String) ruleData.get("attribute_name");
         String combinationType = (String) ruleData.get("combination_type");
 
-        CompositeRule<T> compositeRule = new CompositeRule<>(attributeName, getCombiner(combinationType));
+        CompositeRule<T> compositeRule =
+                new CompositeRule<>(attributeName, getCombiner(combinationType));
 
-        List<Map<String, Object>> childRulesData = (List<Map<String, Object>>) ruleData.get("child_rules");
+        List<Map<String, Object>> childRulesData =
+                (List<Map<String, Object>>) ruleData.get("child_rules");
         for (Map<String, Object> childRuleData : childRulesData) {
             Rule<T> rule = parseRule(childRuleData);
             compositeRule.addRule(rule);

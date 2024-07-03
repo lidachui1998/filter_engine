@@ -1,5 +1,7 @@
 package org.lidachui.filter;
 
+import java.lang.reflect.Field;
+
 /**
  * Rule
  *
@@ -7,11 +9,6 @@ package org.lidachui.filter;
  * @date: 2024/7/3 21:24
  * @version: 1.0
  */
-
-import java.lang.reflect.Field;
-import java.math.BigDecimal;
-import java.util.List;
-
 public abstract class Rule<T> {
     protected String attributeName;
 

@@ -1,5 +1,5 @@
 package org.lidachui.filter;
-
+import java.math.BigDecimal;
 /**
  * Data
  *
@@ -7,8 +7,6 @@ package org.lidachui.filter;
  * @date: 2024/7/3 21:48
  * @version: 1.0
  */
-import java.math.BigDecimal;
-
 public class Data {
     private String marketCode;
     private String sourceCode;
@@ -26,11 +24,18 @@ public class Data {
 
     @Override
     public String toString() {
-        return "Data{" +
-                "marketCode='" + marketCode + '\'' +
-                ", sourceCode='" + sourceCode + '\'' +
-                ", paymentCode='" + paymentCode + '\'' +
-                ", amount=" + amount +
-                '}';
+        return "Data{"
+                + "marketCode='"
+                + marketCode
+                + '\''
+                + ", sourceCode='"
+                + sourceCode
+                + '\''
+                + ", paymentCode='"
+                + paymentCode
+                + '\''
+                + ", amount="
+                + amount
+                + '}';
     }
 }

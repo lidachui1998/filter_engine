@@ -21,4 +21,3 @@ public class GreaterThanOrEqualsRule<T> extends Rule<T> {
         return value.compareTo(fieldValue) <= 0;
     }
 }
-

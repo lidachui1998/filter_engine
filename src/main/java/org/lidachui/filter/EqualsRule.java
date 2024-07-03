@@ -19,5 +19,4 @@ public class EqualsRule<T> extends Rule<T> {
     public boolean apply(T item) {
         return value.equals(getFieldValue(item));
     }
-
 }

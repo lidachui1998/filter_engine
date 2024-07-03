@@ -1,5 +1,8 @@
 package org.lidachui.filter;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * RuleEngine
  *
@@ -7,9 +10,6 @@ package org.lidachui.filter;
  * @date: 2024/7/3 21:36
  * @version: 1.0
  */
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class RuleEngine<T> {
     private final CompositeRule<T> rule;
 

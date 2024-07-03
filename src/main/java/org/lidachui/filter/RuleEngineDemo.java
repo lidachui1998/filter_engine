@@ -1,5 +1,8 @@
 package org.lidachui.filter;
 
+import java.math.BigDecimal;
+import java.util.*;
+
 /**
  * RuleEngineDemo
  *
@@ -7,9 +10,6 @@ package org.lidachui.filter;
  * @date: 2024/7/3 21:48
  * @version: 1.0
  */
-import java.math.BigDecimal;
-import java.util.*;
-
 public class RuleEngineDemo {
 
     public static void main(String[] args) {
@@ -27,7 +27,6 @@ public class RuleEngineDemo {
         Rule<Data> paymentCodeNotEqualsRule = new NotEqualsRule<>("paymentCode", "P1");
         Rule<Data> sourceCodeRule = new EqualsRule<>("sourceCode", "Y");
 
-
         // 创建组合规则 (marketCode == "A" AND paymentCode != "P1")
         CompositeRule<Data> andRule = new CompositeRule<>(null, new AndCombination());
         andRule.addRule(marketCodeRule);
@@ -42,8 +41,7 @@ public class RuleEngineDemo {
 
         List<Data> filter = new RuleEngine<>(orRule).filter(dataList);
         for (Data data : filter) {
-      System.out.println(data);
+            System.out.println(data);
         }
     }
-
 }

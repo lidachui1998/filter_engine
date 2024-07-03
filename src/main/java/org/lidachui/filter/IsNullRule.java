@@ -1,6 +1,5 @@
 package org.lidachui.filter;
 
-
 /**
  * IsNullRule
  *
@@ -8,7 +7,7 @@ package org.lidachui.filter;
  * @date: 2024/7/3 23:23
  * @version: 1.0
  */
-public class IsNullRule<T> extends Rule<T>{
+public class IsNullRule<T> extends Rule<T> {
     public IsNullRule(String attributeName) {
         super(attributeName);
     }

@@ -7,7 +7,6 @@ package org.lidachui.filter;
  * @date: 2024/7/3 21:25
  * @version: 1.0
  */
-
 public class NotEqualsRule<T> extends Rule<T> {
     private final Object value;
 

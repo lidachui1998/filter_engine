@@ -1,9 +1,0 @@
-
-ô
-java:S11921"«Define a constant instead of duplicating this literal "INSERT INTO rule_conditions (rule_id, condition_type, attribute_name, attribute_value) VALUES (?, ?, ?, ?)" 3 times.(Ëøÿíùÿÿÿÿ8ë½Æ‡2J$80ec3dc5-d930-41c1-b3ea-f3a70ff870d4
-y
-java:S1874A"6Remove this use of "queryForObject"; it is deprecated.(ÿùêß8ÎÄÌÆ‡2J$9f893887-04ba-49a8-bf85-444c386e0bd8
-y
-java:S1874F"6Remove this use of "queryForObject"; it is deprecated.(Üö›é8ÏÄÌÆ‡2J$f2c440f3-adff-4234-8e51-90a76e39e455
-x
-java:S1068"0Remove this unused "objectMapper" private field.(“»‚Šûÿÿÿÿ8¥ë½Æ‡2J$2577b9f2-6810-489f-8ae2-6ce2b801ab62

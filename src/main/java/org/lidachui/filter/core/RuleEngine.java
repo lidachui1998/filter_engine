@@ -1,7 +1,8 @@
-package org.lidachui.filter;
+package org.lidachui.filter.core;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import org.lidachui.filter.condition.CompositeRule;
 
 /**
  * RuleEngine

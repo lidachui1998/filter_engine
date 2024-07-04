@@ -1,4 +1,6 @@
-package org.lidachui.filter;
+package org.lidachui.filter.core.rules;
+
+import org.lidachui.filter.core.Rule;
 
 /**
  * EqualsRule

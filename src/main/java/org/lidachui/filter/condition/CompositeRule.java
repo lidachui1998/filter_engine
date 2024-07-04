@@ -1,7 +1,8 @@
-package org.lidachui.filter;
+package org.lidachui.filter.condition;
 
 import java.util.*;
 import java.util.function.Predicate;
+import org.lidachui.filter.core.Rule;
 
 /**
  * CompositeRule

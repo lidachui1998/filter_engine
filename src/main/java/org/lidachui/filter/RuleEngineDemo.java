@@ -2,6 +2,14 @@ package org.lidachui.filter;
 
 import java.math.BigDecimal;
 import java.util.*;
+import org.lidachui.filter.condition.AndCombination;
+import org.lidachui.filter.condition.CompositeRule;
+import org.lidachui.filter.condition.OrCombination;
+import org.lidachui.filter.core.rules.EqualsRule;
+import org.lidachui.filter.core.rules.IsNullRule;
+import org.lidachui.filter.core.rules.NotEqualsRule;
+import org.lidachui.filter.core.Rule;
+import org.lidachui.filter.core.RuleEngine;
 
 /**
  * RuleEngineDemo

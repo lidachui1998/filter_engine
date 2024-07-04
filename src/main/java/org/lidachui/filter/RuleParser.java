@@ -2,6 +2,15 @@ package org.lidachui.filter;
 
 import java.util.*;
 import java.util.function.Predicate;
+import org.lidachui.filter.condition.AndCombination;
+import org.lidachui.filter.condition.CompositeRule;
+import org.lidachui.filter.condition.OrCombination;
+import org.lidachui.filter.core.rules.EqualsRule;
+import org.lidachui.filter.core.rules.InRule;
+import org.lidachui.filter.core.rules.IsNotNullRule;
+import org.lidachui.filter.core.rules.IsNullRule;
+import org.lidachui.filter.core.rules.NotEqualsRule;
+import org.lidachui.filter.dal.model.Rule;
 
 /**
  * RuleParser
@@ -12,22 +21,24 @@ import java.util.function.Predicate;
  */
 public class RuleParser {
 
-    public <T> Rule<T> parseRule(Map<String, Object> ruleData) {
-        String type = (String) ruleData.get("type");
-        String attributeName = (String) ruleData.get("attribute_name");
-        String value = (String) ruleData.get("value");
+    public <T> org.lidachui.filter.core.Rule<T> parseRule(Rule rule) {
+        String ruleType = rule.getRuleType();
+        String attributeName = rule.getAttributeName();
+        String value = rule.getValue();
 
-        switch (type) {
+        switch (ruleType) {
             case "EQUALS":
                 return new EqualsRule<>(attributeName, value);
             case "NOT_EQUALS":
                 return new NotEqualsRule<>(attributeName, value);
             case "IN":
-                String valueStr = (String) ruleData.get("values");
-                String[] split = valueStr.split(",");
+                String[] split = value.split(",");
                 Set<Object> values = new HashSet<>(Arrays.asList(split));
                 return new InRule<>(attributeName, values);
-                // 添加其他类型的规则解析
+            case "IS_NULL":
+                return new IsNullRule<>(attributeName);
+            case "IS_NOT_NULL":
+                return new IsNotNullRule<>(attributeName);
             default:
                 throw new IllegalArgumentException("Unknown rule type: " + type);
         }

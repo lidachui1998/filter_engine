@@ -40,7 +40,7 @@ public class RuleParser {
             case "IS_NOT_NULL":
                 return new IsNotNullRule<>(attributeName);
             default:
-                throw new IllegalArgumentException("Unknown rule type: " + type);
+                throw new IllegalArgumentException("Unknown rule type: " + ruleType);
         }
     }
 

@@ -45,20 +45,7 @@ public class RuleParser {
     }
 
     public <T> CompositeRule<T> parseCompositeRule(Map<String, Object> ruleData) {
-        String attributeName = (String) ruleData.get("attribute_name");
-        String combinationType = (String) ruleData.get("combination_type");
-
-        CompositeRule<T> compositeRule =
-                new CompositeRule<>(attributeName, getCombiner(combinationType));
-
-        List<Map<String, Object>> childRulesData =
-                (List<Map<String, Object>>) ruleData.get("child_rules");
-        for (Map<String, Object> childRuleData : childRulesData) {
-            Rule<T> rule = parseRule(childRuleData);
-            compositeRule.addRule(rule);
-        }
-
-        return compositeRule;
+      return null;
     }
 
     private Predicate<List<Boolean>> getCombiner(String combinationType) {
